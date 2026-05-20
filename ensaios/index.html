@@ -82,7 +82,6 @@ header .main-navigation ul li a {
     text-decoration: none !important;
 }
 
-/* 1. Pinta de branco APENAS os ícones que estão dentro do cabeçalho */
 header .wp-block-social-link svg, 
 header .wp-block-social-link a,
 header i, 
@@ -91,21 +90,17 @@ header svg {
     color: #FFFFFF!important;
 }
 
-/* 2. "Reseta" os ícones que estão fora do cabeçalho (no corpo do site) */
-/* Isso permite que eles voltem à cor padrão ou que você os edite no WordPress */
 main .wp-block-social-link svg, 
 #content .wp-block-social-link svg,
 .entry-content .wp-block-social-link svg {
-    fill: currentColor; /* Faz o ícone obedecer à cor do texto ou do bloco */
+    fill: currentColor;
 }
 
-/* 3. Se você usou o filtro de inversão (preto para branco) antes, remova-o do corpo */
 main .wp-block-social-link img,
 main .wp-block-social-link svg {
     filter: none !important;
 }
 
-/* Remove o contorno e fundo de foco em TODO o site */
 a:focus, 
 a:active, 
 button:focus, 
@@ -115,10 +110,9 @@ textarea:focus,
     outline: none !important;
     background-color: transparent !important;
     box-shadow: none !important;
-    -webkit-tap-highlight-color: transparent; /* Remove o brilho cinza em dispositivos móveis */
+    -webkit-tap-highlight-color: transparent;
 }
 
-/* Garante que imagens que são links também fiquem limpas */
 a img:focus {
     outline: none !important;
     border: none !important;
@@ -135,7 +129,6 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span {
     line-height: 1.1;
 }
 
-/* --- SPLASH SCREEN CURA --- */
 #splash-curadoria {
     position: fixed;
     top: 0;
@@ -143,7 +136,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span {
     width: 100vw;
     height: 100vh;
     background-color: #FF0000;
-    z-index: 999999; /* Força a ficar por cima de absolutamente tudo */
+    z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,7 +145,6 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span {
     transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.6s;
 }
 
-/* Quando adicionarmos a classe 'oculto' via JS, a tela some suavemente */
 #splash-curadoria.oculto {
     opacity: 0;
     visibility: hidden;
@@ -160,10 +152,9 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span {
 
 .splash-conteudo {
     padding: 20px;
-    user-select: none; /* Evita que o usuário selecione o texto sem querer ao clicar */
+    user-select: none;
 }
 
-/* Animação opcional para deixar o aviso pulsando levemente (estética de sistema) */
 @keyframes pulsar {
     0% { opacity: 0.7; }
     50% { opacity: 1; }
@@ -173,22 +164,20 @@ body, h1, h2, h3, h4, h5, h6, p, a, li, span {
     animation: pulsar 2s infinite ease-in-out;
 }
 
-/* Alvo no botão de download da página de contato/conteúdo */
 .wp-block-file .wp-block-file__button,
 .wp-block-button__link {
     background-color: #FFFFFF !important;
     color: #FF0000 !important;
     font-family: Arial, Helvetica, sans-serif !important;
 
-    text-transform: uppercase !important; /* Força Caixa Alta */
+    text-transform: uppercase !important;
     letter-spacing: -0.5px;
-    border: 2px solid #FF0000 !important; /* Borda vermelha fina para dar acabamento no fundo branco */
-    border-radius: 20px !important; /* Remove bordas arredondadas para um visual mais industrial/frio */
+    border: 2px solid #FF0000 !important;
+    border-radius: 20px !important;
     padding: 12px 24px !important;
     transition: all 0.3s ease;
 }
 
-/* Efeito ao passar o mouse (Inverte as cores) */
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
     background-color: #FF0000 !important;
